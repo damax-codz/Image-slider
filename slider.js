@@ -6,22 +6,23 @@ var arr =["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdxrc0W9TKaGPqv
 var i=0;
 function vic (){
 if(i>=arr.length-1){
-i=arr.length-2
+i=-1
+document.getElementsByTagName("span")[arr.length-1].style.color="rgba(197, 197, 197)"
 } 
 i++
 document.getElementById("pics").src=arr[i];
 document.getElementsByTagName("span")[i].style.color="black"
 document.getElementsByTagName("span")[i-1].style.color="rgba(197, 197, 197)"
 }
+setInterval(vic,3000)
+// function voc (){
+// if(i==0){
+// i+=1
+// }    
+// i-=1
 
-function voc (){
-if(i==0){
-i+=1
-}    
-i-=1
+// document.getElementById("pics").src=arr[i]
 
-document.getElementById("pics").src=arr[i]
-
-document.getElementsByTagName("span")[i].style.color="black"
-document.getElementsByTagName("span")[i+1].style.color="rgba(197, 197, 197)"
-}
+// document.getElementsByTagName("span")[i].style.color="black"
+// document.getElementsByTagName("span")[i+1].style.color="rgba(197, 197, 197)"
+// }
